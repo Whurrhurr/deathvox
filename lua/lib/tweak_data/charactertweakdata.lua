@@ -1838,7 +1838,7 @@ function CharacterTweakData:_init_deathvox(presets)
 	self.deathvox_medic.detection = presets.detection.normal
 	self.deathvox_medic.damage.hurt_severity = presets.hurt_severities.only_fire_and_poison_hurts -- added to make code consistent.
 	self.deathvox_medic.suppression = presets.suppression.no_supress -- tentative, in base.
-	self.deathvox_medic.surrender = presets.surrender.special 
+	self.deathvox_medic.surrender = nil --hotfix for specials surrendering until we get an actual fix.
 	self.deathvox_medic.move_speed = presets.move_speed.very_fast
 	self.deathvox_medic.surrender_break_time = {7, 12} 
 	self.deathvox_medic.ecm_vulnerability = 1
@@ -1866,7 +1866,7 @@ function CharacterTweakData:_init_deathvox(presets)
 	self.deathvox_taser.damage.hurt_severity = presets.hurt_severities.only_light_hurt_and_fire
 	self.deathvox_taser.damage.hurt_severity.tase = false -- if this works, great, horrible things will arise.
 	self.deathvox_taser.suppression = presets.suppression.no_supress -- consistent form added.
-	self.deathvox_taser.surrender = presets.surrender.special 
+	self.deathvox_taser.surrender = nil --hotfix for specials surrendering until we get an actual fix.
 	self.deathvox_taser.move_speed = presets.move_speed.fast
 	self.deathvox_taser.surrender_break_time = {7, 12} 
 	self.deathvox_taser.ecm_vulnerability = 0.9 -- in base
@@ -1888,7 +1888,7 @@ function CharacterTweakData:_init_deathvox(presets)
 	self.deathvox_cloaker.tags = {"spooc"} -- just making sure tag applies.
 	self.deathvox_cloaker.detection = presets.detection.normal
 	self.deathvox_cloaker.suppression = nil
-	self.deathvox_cloaker.surrender = presets.surrender.special 
+	self.deathvox_cloaker.surrender = nil --hotfix for specials surrendering until we get an actual fix.
 	self.deathvox_cloaker.move_speed = presets.move_speed.lightning
 	self.deathvox_cloaker.HEALTH_INIT = 96
 	self.deathvox_cloaker.headshot_dmg_mul = 3
@@ -1910,7 +1910,7 @@ function CharacterTweakData:_init_deathvox(presets)
 	self.deathvox_sniper.tags = {"sniper"} -- just making sure tag applies.
 	self.deathvox_sniper.detection = presets.detection.normal
 	self.deathvox_sniper.suppression = presets.suppression.no_supress -- this actually makes snipers way less annoying!
-	self.deathvox_sniper.surrender = presets.surrender.special 
+	self.deathvox_sniper.surrender = nil --just in case DV snipers also suffer the surrender bug.
 	self.deathvox_sniper.move_speed = presets.move_speed.normal
 	self.deathvox_sniper.surrender_break_time = {4, 6} 
 	self.deathvox_sniper.ecm_vulnerability = 0
